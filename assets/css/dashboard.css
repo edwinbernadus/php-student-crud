@@ -1,0 +1,270 @@
+.appbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 56px;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+}
+
+.appbar-brand h1 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.appbar-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    max-width: 560px;
+    height: 38px;
+    padding: 0 14px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: var(--soft);
+}
+
+.appbar-search:focus-within {
+    border-color: var(--line);
+    background: #fff;
+}
+
+.search-icon {
+    font-size: 13px;
+    opacity: .5;
+}
+
+.search-input {
+    flex: 1;
+    border: 0;
+    background: transparent;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.appbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 20px 20px 40px;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chips .select {
+    width: auto;
+    min-width: 180px;
+    height: 38px;
+}
+
+.table-wrap {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 10px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+}
+
+.table thead th {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.table th.sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.table th.sortable:hover {
+    color: var(--text);
+}
+
+.table th.sorted {
+    color: var(--blue);
+}
+
+.table tbody tr:hover {
+    background: var(--hover);
+}
+
+.table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.cell-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cell-name .avatar {
+    width: 28px;
+    height: 28px;
+}
+
+.cell-name .name {
+    font-weight: 500;
+}
+
+.table .muted {
+    color: var(--muted);
+}
+
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.empty {
+    padding: 32px !important;
+    text-align: center;
+    color: var(--muted);
+}
+
+.actions-col {
+    width: 1%;
+}
+
+.row-actions {
+    display: flex;
+    gap: 2px;
+}
+
+.pager {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.pager-info {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.pager-pages {
+    display: flex;
+    gap: 2px;
+}
+
+.page-btn {
+    min-width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--muted);
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: var(--soft);
+    color: var(--text);
+}
+
+.page-btn.active {
+    background: var(--blue);
+    color: #fff;
+    font-weight: 500;
+}
+
+.page-btn:disabled {
+    opacity: .35;
+    cursor: default;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: grid;
+    place-items: center;
+    padding: 16px;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(32, 33, 36, .4);
+}
+
+.modal-card {
+    position: relative;
+    width: min(440px, 100%);
+    max-height: 90vh;
+    overflow: auto;
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+}
+
+.modal-title {
+    margin: 0 0 16px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 8px;
+}
